@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>прикольчик :))</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-hearts" id="bg-hearts"></div>
+    <div class="fireworks" id="fireworks" aria-hidden="true"></div>
+    <div class="easter-egg">
+      <button id="easterEggBtn" class="easter-egg-btn hidden" type="button">пасхалочка</button>
+      <span id="easterEggMessage" class="easter-egg-message hidden">Секрет: я тебя очень люблю ♥</span>
+    </div>
+
+    <main class="card">
+      <p class="tiny-tag">К тебе тут вопросик.. В общем:</p>
+      <h1 id="question">Ты любишь меня?</h1>
+      <p class="note">Подумай хорошенько. Хотя правильный ответ ты итак знаешь.</p>
+
+      <div class="buttons-wrap">
+        <button id="yesBtn" class="btn btn-yes">Да, люблю</button>
+        <button id="noBtn" class="btn btn-no">Нет, не люблю</button>
+      </div>
+
+      <div id="loveMessage" class="love-message hidden" aria-live="polite">
+        <h2>Я знал ♥ </h2>
+        <p> Солнышко моё, самое красивое,самое милое и самое лучшее.</p>
+        <p> Люблю тебя очень сильно,спасибо что ты есть :) </p>
+        <p>Я очень рад что ты со мной</p>
+        <p class="together-counter">Кстати, мы вместе уже <span id="daysTogether">0</span> <span id="daysWord">дней</span> ♥</p>
+        <p class="fireworks-counter" aria-live="polite">Салютов: <span id="fireworksCount">0</span></p>
+        <button id="moreFireworksBtn" class="more-fireworks-btn" type="button">ещё салютик что ли</button>
+        <button id="cuteModeBtn" class="cute-mode-btn" type="button" aria-pressed="false">сделать помилее</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
