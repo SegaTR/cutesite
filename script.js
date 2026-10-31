@@ -84,12 +84,11 @@ function moveNoButton() {
     noBtn.classList.add('is-running');
     noBtn.style.left = `${buttonRect.left}px`;
     noBtn.style.top = `${buttonRect.top}px`;
+    noBtn.getBoundingClientRect();
   }
 
-  requestAnimationFrame(() => {
-    noBtn.style.left = `${destination.left}px`;
-    noBtn.style.top = `${destination.top}px`;
-  });
+  noBtn.style.left = `${destination.left}px`;
+  noBtn.style.top = `${destination.top}px`;
 }
 
 function launchFireworks() {
@@ -168,9 +167,13 @@ function launchCelebration(showPhotos = false) {
 noBtn.addEventListener('pointerenter', (event) => {
   if (event.pointerType === 'mouse') moveNoButton();
 });
+noBtn.addEventListener('touchstart', () => {
+  noBtn.classList.add('is-touch');
+  moveNoButton();
+}, { passive: true });
 noBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  if (!noBtn.classList.contains('is-running') || event.pointerType === 'touch') moveNoButton();
+  if (!noBtn.classList.contains('is-running') && event.detail === 0) moveNoButton();
 });
 
 moreFireworksBtn.addEventListener('click', () => {

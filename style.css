@@ -191,6 +191,8 @@ h1 {
   margin: 0;
 }
 
+.btn-no.is-running.is-touch { transition: none; }
+
 .love-message {
   margin-top: 26px;
   padding-top: 20px;
