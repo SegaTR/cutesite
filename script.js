@@ -170,7 +170,7 @@ noBtn.addEventListener('pointerenter', (event) => {
 });
 noBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  if (!noBtn.classList.contains('is-running')) moveNoButton();
+  if (!noBtn.classList.contains('is-running') || event.pointerType === 'touch') moveNoButton();
 });
 
 moreFireworksBtn.addEventListener('click', () => {
